@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "eval" "\0"
+            VALUE "CompanyName", "net.epsi" "\0"
+            VALUE "FileDescription", "epsi_shop" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "eval" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "eval.exe" "\0"
-            VALUE "ProductName", "eval" "\0"
+            VALUE "InternalName", "epsi_shop" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 net.epsi. All rights reserved." "\0"
+            VALUE "OriginalFilename", "epsi_shop.exe" "\0"
+            VALUE "ProductName", "epsi_shop" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

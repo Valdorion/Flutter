@@ -1,11 +1,11 @@
 {
-    "name": "eval",
-    "short_name": "eval",
+    "name": "epsi_shop",
+    "short_name": "epsi_shop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "An IT shop for EPSI students",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
