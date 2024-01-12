@@ -31,22 +31,25 @@ class PaymentPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Column(
-                  children: [
-                    Text("Récapitulatif de la commande", style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-                    Text("Sous-Total"),
-                    Text("Vous économisez"),
-                    Text("TVA"),
-                    Text(
-                      "Total",
-                      style:
-                      const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    )
-                  ],
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Récapitulatif de la commande", style:
+                      const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                      Text("Sous-Total"),
+                      Text("Vous économisez"),
+                      Text("TVA"),
+                      Text(
+                        "Total",
+                        style:
+                        const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      )
+                    ],
                 ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(""),
                       Text("${cart.priceTotalInEuro()}€"),
@@ -78,7 +81,6 @@ class PaymentPage extends StatelessWidget {
             Row(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height: 75,
