@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../bo/cart.dart';
@@ -42,7 +43,18 @@ class EmptyCart extends StatelessWidget {
         Spacer(),
         Text("Votre panier est actuellement vide"),
         Icon(Icons.image),
-        Spacer()
+        Spacer(),
+
+        TextButton(
+          style: TextButton.styleFrom(
+            fixedSize: Size.fromWidth(350),
+            textStyle: const TextStyle(fontSize: 20),
+            foregroundColor: Colors.white,
+            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          ),
+          onPressed: null,
+          child: const Text('Procéder au payement'),
+        ),
       ],
     );
   }
@@ -83,9 +95,25 @@ class ListCart extends StatelessWidget {
                                   .read<Cart>()
                                   .removeArticle(cart.items[index]),
                             ),
-                          )),
+                      )),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        fixedSize: Size.fromWidth(350),
+                        textStyle: const TextStyle(fontSize: 20),
+                        foregroundColor: Colors.white,
+                        backgroundColor: Theme.of(context).colorScheme.primary,
+                      ),
+                      onPressed: () => context.go('/cart/payment'),
+                      child: const Text('Procéder au payement'),
+                    ),
+                  ],
+                )
               ],
             ));
+
   }
 }

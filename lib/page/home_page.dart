@@ -31,10 +31,10 @@ class HomePage extends StatelessWidget {
           future: fetchListArticles(),
           builder: (context, snapshot) => snapshot.hasData
               ? ListView.separated(
-                  itemCount: snapshot.data!.length,
-                  separatorBuilder: (_, __) => const Divider(),
-                  itemBuilder: (context, int index) =>
-                      ItemArticle(article: snapshot.data![index]))
+              itemCount: snapshot.data!.length,
+              separatorBuilder: (_, __) => const Divider(),
+              itemBuilder: (context, int index) =>
+                  ItemArticle(article: snapshot.data![index]))
               : const Icon(Icons.error)));
 
   Future<List<Article>> fetchListArticles() async {
